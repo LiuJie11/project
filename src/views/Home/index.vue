@@ -63,6 +63,7 @@ export default {
             flex: 1;
             height: 100%;
             box-sizing: border-box;
+            min-width: 874px;
             padding: 24px;
             background: #f8f8f8;
         };

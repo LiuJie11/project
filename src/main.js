@@ -77,7 +77,8 @@ import {
   Backtop,
   PageHeader,
   CascaderPanel,
-  Loading
+  Loading,
+  Message
 } from 'element-ui';
 
 
@@ -163,6 +164,7 @@ Vue.use(Loading.directive);
 
 
 Vue.prototype.$Bus = new Vue();
+Vue.prototype.$message = Message;
 
 Vue.config.productionTip = false
 
