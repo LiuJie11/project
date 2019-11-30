@@ -63,9 +63,9 @@ export default {
             flex: 1;
             height: 100%;
             box-sizing: border-box;
-            min-width: 874px;
             padding: 24px;
             background: #f8f8f8;
+            overflow-y: scroll;
         };
         
         .padL0{
@@ -77,7 +77,12 @@ export default {
             width: 100%;
             border-radius: 12px;
             padding:  32px 48px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+              display: none;
+            }
           }
+        
       }
   }
 </style>

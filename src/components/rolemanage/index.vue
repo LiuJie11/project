@@ -44,7 +44,7 @@
               </div>
           </template>
             <template slot-scope='scope'>
-              <div @click='handleEdit(scope.row)'  style='padding-left:10px;'>
+              <div @click='handleEdit(scope.$index,scope.row)'  style='padding-left:10px;'>
                 <span style='font-size:16px; letter-spacing:5px'>...</span>
                 <img style='width:20px;height:20px;margin-left:10px' src="~assets/imgs/home/edit.png" />
               </div>
@@ -218,7 +218,8 @@ export default {
         // this.tableData.splice(index,1)
     },
     // 编辑某一行
-    handleEdit(row){
+    handleEdit(index,row){
+        this.index = index
         this.dialogVisible = true;
         this.type = 1;
         this.addForm.name = row.name
@@ -227,6 +228,7 @@ export default {
         this.addForm.phone = row.phone
         this.addForm.job = row.job
         this.addForm.branch = row.branch
+       
     },
     // 添加角色
     handleAddRole(){
@@ -244,10 +246,14 @@ export default {
              this.tableData.unshift(this.addForm)
              this.$message('添加成功')
           }else{
-            console.log(this.tableData[0])
-            this.tableData = this.tableData;
+            this.tableData[this.index].name = this.addForm.name 
+            this.tableData[this.index].sex = this.addForm.sex
+            this.tableData[this.index].age = this.addForm.age
+            this.tableData[this.index].phone = this.addForm.phone
+            this.tableData[this.index].job = this.addForm.job
+            this.tableData[this.index].branch = this.addForm.branch
+            // this.tableData = this.tableData;
           }
-         
           this.dialogVisible = false
           this.restAddForm()
         }
@@ -289,6 +295,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-top: 20px;
     .input-row {
       display: flex;
       align-items: center;

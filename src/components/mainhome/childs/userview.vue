@@ -37,8 +37,8 @@ export default {
           padding-bottom: 18px;
           font-weight: 600;
         }
+        
       .user-view{
-        width:349px;
         height:95%;
         background:rgba(255,255,255,1);
         border:1px solid rgba(244,244,252,1);
@@ -46,9 +46,14 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display:none;
+        }
         img{
-            width: 255px;
-            height: 311px;
+            width: 200px;
+            height: 230px;
             margin-top: 30px;
         }
         span{

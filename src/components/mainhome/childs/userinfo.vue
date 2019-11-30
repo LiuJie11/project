@@ -96,7 +96,7 @@ export default {
 
 <style lang='less' scoped>
     .userinfo{
-        width: 1080px;
+        width: 80%px;
         margin-top: 40px; 
         h3{
             font-size: 20px;

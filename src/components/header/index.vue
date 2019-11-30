@@ -46,7 +46,6 @@ export default {
 #header {
   display: flex;
   width: 100%;
-  min-width: 1300px;
   height: 60px;
   line-height: 60px;
   .header-left {

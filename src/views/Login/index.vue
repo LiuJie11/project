@@ -128,11 +128,15 @@ export default {
     #login{
         height: 100%;
         width: 100%;
+        min-height: 800px; 
         position: relative;
-        background: url('~assets/imgs/login/login_bg.png') no-repeat center center/100% 100%;
+        background: url('~assets/imgs/login/login_bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        // overflow: hidden;
         .login-content{
-            height: 765px;
-            width: 1218px;
+            width: 1200px;
             background: #fff;
             border-radius: 16px;
             box-shadow:0px 0px 8px rgba(36,20,226,1);
@@ -145,7 +149,7 @@ export default {
             justify-content:space-between;
             align-items: center;
             box-sizing: border-box;
-            padding: 0 72px 0 18px;
+            padding: 30px 72px 30px 18px;
             // border: 1px solid red;
         };
         img{
