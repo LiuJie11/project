@@ -76,7 +76,7 @@ const routes = [
                     {
                         path:'/home/system/role2', // 权限管理
                         name:'权限管理',
-                        component:Error,
+                        component:()=>import('components/authorization'),
                     }
                 ]
             }

@@ -243,7 +243,8 @@ export default {
       this.$refs.addForm.validate((valid)=>{
         if(valid){
           if(this.type===0){
-             this.tableData.unshift(this.addForm)
+             const obj =  JSON.parse(JSON.stringify(this.addForm))
+             this.tableData.unshift(obj)
              this.$message('添加成功')
           }else{
             this.tableData[this.index].name = this.addForm.name 
